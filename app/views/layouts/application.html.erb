@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html style="height:100%">
   <head>
     <title>Diazdeberenguer</title>
     <%= csrf_meta_tags %>
@@ -8,7 +8,20 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <%= yield %>
+  <body style="height:100%">
+
+  	<div class="container-fluid home-container">
+  		<div class="row home-row">
+  			<div class="col-md-3 col-lg-2 left-cols">
+					<%= render 'shared/navigation' %>
+  			</div>
+  			<div class="col-md-9 col-lg-10 right-cols">
+  				<div class="container">
+  					<%= yield %>
+  				</div>
+  			</div>
+  		</div>
+  	</div>
+
   </body>
 </html>

@@ -1,0 +1,29 @@
+<div class="personal-info row">
+	<!-- A pic -->
+	<div class="col-md-12 col-3">
+		<%= image_tag ENV['PROFILE_PIC_URL'], alt: "diego-profile-pic", class: "prof-pic" %>
+	</div>
+
+	<!-- A name -->
+	<div class="col-md-12 col-4" style="padding-top:1em">
+		<h4 class="slim">
+			Diego <br>
+			<small>Diaz de Berenguer</small>
+		</h4>
+	</div>
+
+</div>
+
+<div class="action-list">
+	<div class="row no-gutters">
+		<%= link_to '#' do %>
+			Blog
+		<% end %>
+	</div>
+
+	<div class="row no-gutters">
+		<%= link_to '#' do %>
+			About
+		<% end %>
+	</div>
+</div>
