@@ -1,2 +1,2 @@
 json.name @lorem.name
-json.text @lorem.text
+json.text @text
