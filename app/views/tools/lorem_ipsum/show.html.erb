@@ -1,0 +1,14 @@
+<div class="container-fluid white" style="padding-top:4em">
+	<h2>Lorem Ipsums</h2>
+	<hr>
+	<h4>
+		<%= @lorem.name %>
+	</h4>
+
+	<%= link_to edit_tools_lorem_ipsum_path(@lorem) do %>
+		Edit
+	<% end %>
+	<hr>
+
+	<%= @lorem.text %>
+</div>

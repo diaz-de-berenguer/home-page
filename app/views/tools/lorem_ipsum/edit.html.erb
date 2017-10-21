@@ -1,0 +1,12 @@
+<div class="container-fluid white" style="padding-top:4em">
+	<h2>Lorem Ipsums</h2>
+	<hr>
+	<h4>Edit - <%= @lorem.name %></h4>
+	<%= simple_form_for @lorem, url: tools_lorem_ipsum_path(@lorem) do |f| %>
+		<%= render 'form_fields', f: f %>
+	<% end %>
+	<hr>
+	<%= link_to tools_lorem_ipsum_path, method: :delete, data: { confirm: "Sure?" } do %>
+		Delete
+	<% end %>
+</div>

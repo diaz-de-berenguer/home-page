@@ -6,4 +6,12 @@ Rails.application.routes.draw do
     resources :posts, path: '/'
   end
 
+  namespace :api, defaults: { format: :json } do
+  	resources :lorem_ipsum
+  end
+
+  namespace :tools do
+  	resources :lorem_ipsum
+  end
+
 end
