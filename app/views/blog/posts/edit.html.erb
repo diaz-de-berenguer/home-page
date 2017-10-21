@@ -1,0 +1,27 @@
+<div id="blog-posts">
+	<div class="row justify-content-md-center">
+		<div class="col-lg-10 col-md-11">
+			<div class="header container-fluid">
+				<h1>
+					Blog
+				</h1>
+			</div>
+		</div>
+	</div>
+
+	<div class="row justify-content-md-center">
+		<div class="col-lg-10 col-md-11">
+			<div class="box container-fluid">
+				<h3>Edit</h3>
+				<hr>
+				<%= simple_form_for @post, html: { class: 'form-horizontal' }, url: blog_post_path(@post) do |f| %>
+					<%= render 'form_fields', f: f %>
+				<% end %>
+				<hr>
+				<%= link_to blog_post_path(@post), method: :delete, data: { confirm: "Are you sure?" } do %>
+					<%= @post.published ? 'Unpublish' : 'Delete' %>
+				<% end %>
+			</div>
+		</div>
+	</div>
+</div>

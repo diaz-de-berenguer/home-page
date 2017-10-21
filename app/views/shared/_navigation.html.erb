@@ -1,4 +1,5 @@
 <div class="personal-info row">
+
 	<!-- A pic -->
 	<div class="col-md-12 col-3">
 		<%= image_tag ENV['PROFILE_PIC_URL'], alt: "diego-profile-pic", class: "prof-pic" %>
@@ -6,24 +7,35 @@
 
 	<!-- A name -->
 	<div class="col-md-12 col-4" style="padding-top:1em">
-		<h4 class="slim">
-			Diego <br>
-			<small>Diaz de Berenguer</small>
-		</h4>
+		<%= link_to root_path do %>
+			<h4 class="slim">
+				Diego <br>
+				<small>Diaz de Berenguer</small>
+			</h4>
+		<% end %>
 	</div>
 
 </div>
 
 <div class="action-list">
 	<div class="row no-gutters">
-		<%= link_to '#' do %>
+		<%= link_to blog_posts_path, class: 'slim' do %>
+			<!-- <h4 class="slim"><small>Blog</small></h4> -->
 			Blog
 		<% end %>
 	</div>
 
 	<div class="row no-gutters">
-		<%= link_to '#' do %>
+		<%= link_to '#', class: 'slim' do %>
+			<!-- <h4 class="slim"><small>About</small></h4> -->
 			About
+		<% end %>
+	</div>
+
+	<div class="row no-gutters">
+		<%= link_to '#', class: 'slim' do %>
+			<!-- <h4 class="slim"><small>Projects</small></h4> -->
+			Projects
 		<% end %>
 	</div>
 </div>

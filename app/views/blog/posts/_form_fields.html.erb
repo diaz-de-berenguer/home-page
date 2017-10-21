@@ -1,0 +1,8 @@
+<%= f.hidden_field :published, value: true %>
+<%= f.input :title %>
+<%= f.input :header_image_url %>
+<%= f.input :body, input_html: { rows: '10' } %>
+<%= f.input :short_description %>
+<%= button_tag type: 'submit', class: 'btn btn-primary' do %>
+	Save
+<% end %>

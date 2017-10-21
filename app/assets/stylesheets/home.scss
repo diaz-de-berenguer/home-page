@@ -7,7 +7,14 @@
 
 .home-container {
 	height:100%;
-	background-color:#f7f8f9;
+	// background-color:#f7f8f9;
+	background-color: #f8f7f9;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+
 	.home-row {
 		height:100%;
 		.left-cols {
@@ -22,12 +29,22 @@
 				    display: block;
 				    border-radius: 300px;
 				}
+				a {
+					color: $font-color;
+					&:hover {
+						text-decoration: none;
+					}
+				}
 			}
 			.action-list {
 				a {
 					margin-top: 1em;
 				}
 			}
+		}
+		.right-cols {
+			overflow: scroll;
+			padding-bottom: 5em;
 		}
 	}
 }
