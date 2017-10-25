@@ -1,1 +1,19 @@
-post!
+<div id="blog-post">
+	<div class="container-fluid white post">
+		<%= link_to blog_posts_path + "##{@post.slug}" do %>
+			<div class="header-image row" style="background-image:url(<%= @post.header_image_url.to_s %>);"></div>
+		<% end %>
+
+		<div class="row justify-content-center">
+			<div class="col-lg-10" style="padding-bottom:5em;">
+				<h1>
+					<%= @post.title %>
+				</h1>
+				<hr>
+					<small><%= @post.created_at.strftime("%x") %></small>
+				<hr>
+				<%= markdown @post.body %>
+			</div>
+		</div>
+	</div>
+</div>

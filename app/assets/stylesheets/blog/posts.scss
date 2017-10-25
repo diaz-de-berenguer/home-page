@@ -11,5 +11,33 @@
 		margin: 1.5em 0 0;
 		padding-top: 0.5em;
 		padding-bottom: 0.5em;
+		.blog-index-header-image {
+			height: 20em;
+		    background-position: center;
+		    background-size: cover;
+		    background-color: hsla(270, 10%, 82%, 0.2);
+		    margin-bottom: 2em;
+		    box-shadow: 1px 1px 9px -2px rgba(173, 173, 173, 0.35) inset;
+		}
+		a {
+			color: $font-color;
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+#blog-post {
+	.post {
+		max-width: 800px;
+	}
+	.header-image {
+		height: 20em;
+	    background-position: center;
+	    background-size: cover;
+	    background-color: hsla(270, 10%, 82%, 0.2);
+	    margin-bottom: 2em;
+	    box-shadow: 1px 1px 9px -2px rgba(173, 173, 173, 0.35) inset;
 	}
 }

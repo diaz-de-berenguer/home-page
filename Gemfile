@@ -50,6 +50,10 @@ gem 'friendly_id', '~> 5.1.0'
 # Font Awesome
 gem "font-awesome-rails"
 
+# Markdown Parser and syntax highlighter
+gem 'pygments.rb', '~> 0.6.3'
+gem 'redcarpet', '~> 3.4'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri

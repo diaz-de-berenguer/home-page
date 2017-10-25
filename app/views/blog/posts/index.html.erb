@@ -10,12 +10,16 @@
 	</div>
 
 	<% @posts.each do |post| %>
-		<div class="row justify-content-md-center">
+		<div class="row justify-content-md-center" id="<%= post.slug %>">
 			<div class="col-lg-10 col-md-11">
 				<div class="box container-fluid">
 					<%= link_to post.link do %>
+						<div class="blog-index-header-image" style="background-image:url(<%= post.header_image_url.to_s %>);">
+						</div>
 						<h3><%= post.title %></h3>
-						<%= post.published %>
+						<p class="faded">
+							<%= post.short_description %>
+						</p>
 					<% end %>
 				</div>
 			</div>
