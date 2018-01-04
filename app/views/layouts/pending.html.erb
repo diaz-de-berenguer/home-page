@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html style="height:100%">
   <head>
-    <title>Diazdeberenguer</title>
+    <title><%= title_helper %></title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -11,4 +11,17 @@
   <body style="height:100%">
     <%= yield %>
   </body>
+
+  <!--
+  	Hello Friend! Thanks for inspecting this page, I'd love to hear your thoughts.
+  	Feel free to email me at: diego at diazdeberenguer dot com
+
+  	If you're wondering why the following JS is in this here script tag
+  	(instead of being in its own file, as is good practice), it's because of you!
+
+  	I'd like you to see it, and if you'd like, to go ahead and send me feedback.
+  	Thanks!
+	-->
+
+	<%= render 'tools/pending_script' %>
 </html>

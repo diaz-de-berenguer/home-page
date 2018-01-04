@@ -17,4 +17,8 @@ module ApplicationHelper
 		}
 		Redcarpet::Markdown.new(renderer, options).render(text).html_safe
 	end
+
+	def title_helper
+		return "Diego Diaz de Berenger"
+	end
 end
