@@ -1,0 +1,19 @@
+.pending-container {
+	height:100%;
+	display:flex;
+	background-image:url('xPLCnzb.gif');
+	background-position: center;
+	background-size: cover;
+	justify-content: center;
+	align-items: center;
+	.info {
+		background-color: rgba(255, 255, 255, 0.8);
+		padding: 4em 7em;
+		border-radius: 3px;
+		box-shadow: 2px 2px 5px -1px #11111187;
+		.links {
+			padding: 3px;
+			margin: 4px;
+		}
+	}
+}
