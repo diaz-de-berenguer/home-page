@@ -22,14 +22,14 @@
 	let start = () => {
 		// Add active class, a canvas element, and a way to close the game
 		infoDiv.addClass("active");
-		infoDiv.prepend('<div class="close-game"><%= fa_icon "times-circle" %></div><div id="canvas"></div>')
+		infoDiv.prepend('<div class="close-game"><%= fa_icon "times-circle" %></div><div id="canvas"><h1 class="instructions">instructions</h1></div>')
 		infoContentDiv.fadeOut(10);
 
 		// Initialize the game
-		initializeGame();
+		setTimeout(initializeGame, 2000);
 
 		// Set function for closing the game
-		$(".close-game").on("click", closeGame);
+		$(".close-game i").on("click", closeGame);
 	}
 
 	// Closes the game -- occurs when user presses the (x) button or the escape key
@@ -37,11 +37,21 @@
 		infoDiv.removeClass("active");
 		$(".close-game").remove();
 		$("#canvas").remove();
-		infoContentDiv.fadeIn();
+		setTimeout(function() {
+			infoContentDiv.fadeIn();
+		}, 600);
 	}
 
 	let initializeGame = () => {
-		console.log('initialize Game!');
+		console.log('initializing Game!');
+
+		let canvas = $(".pending-container #canvas")
+
+		<%= render 'tools/game.js' %>
+
+		canvas.find('.instructions').fadeOut(900, function() {
+			let myp5 = new p5(game, 'canvas');
+		});
 	}
 
 </script>

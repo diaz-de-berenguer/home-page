@@ -15,14 +15,28 @@
 		width: 50%;
 		min-height: 50%;
 		transition: width 1s, min-height 1s;
+		display: flex;
+		flex-direction: column;
+
+		#canvas {
+			background-color: green;
+			flex: 1;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			.instructions {
+
+			}
+		}
+
 		.links {
 			padding: 3px;
 			margin: 4px;
 		}
 		.info-content {
 			max-width: 415px;
-			display: block;
-			margin: 0 auto;
+			// display: block;
+			// margin: 0 auto;
 		}
 		.space-bar {
 			border: 1px solid #bfbfbf;
@@ -43,12 +57,12 @@
 		background-color: #fff;
 		border-radius: 0;
 		.close-game {
-			float: right;
 			color: #bbb;
 			margin-top: -1em;
 			font-size: 2em;
 			i {
 				cursor: pointer;
+				float: right;
 			}
 		}
 	}
