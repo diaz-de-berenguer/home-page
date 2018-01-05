@@ -1,4 +1,5 @@
 .pending-container {
+	padding:0;
 	height: 100%;
 	display: flex;
 	background-image: image-url('xPLCnzb.gif');
@@ -11,9 +12,50 @@
 		padding: 4em 7em;
 		border-radius: 3px;
 		box-shadow: 2px 2px 5px -1px #11111187;
+		width: 50%;
+		min-height: 50%;
+		transition: width 1s, min-height 1s;
 		.links {
 			padding: 3px;
 			margin: 4px;
 		}
+		.info-content {
+			max-width: 415px;
+			display: block;
+			margin: 0 auto;
+		}
+		.space-bar {
+			border: 1px solid #bfbfbf;
+			text-align: center;
+			padding: 0.5em 1em;
+			margin: 2em 0;
+			background-color: hsla(0, 0%, 96%, 1);
+			background: linear-gradient( hsl(0, 0%, 100%), #f3f3f3 );
+			cursor: pointer;
+			h4 {
+				margin: 0;
+			}
+		}
+	}
+	.info.active {
+		width: 100%;
+		min-height: 100%;
+		background-color: #fff;
+		border-radius: 0;
+		.close-game {
+			float: right;
+			color: #bbb;
+			margin-top: -1em;
+			font-size: 2em;
+			i {
+				cursor: pointer;
+			}
+		}
+	}
+}
+
+@media(max-width: 900px) {
+	.pending-container .info {
+		width: 90%;
 	}
 }
