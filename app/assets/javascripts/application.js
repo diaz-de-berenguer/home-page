@@ -14,5 +14,5 @@
 //= require jquery_ujs
 //= require popper
 //= require bootstrap-sprockets
-//= require turbolinks
+// require turbolinks // no longer using
 //= require_tree .

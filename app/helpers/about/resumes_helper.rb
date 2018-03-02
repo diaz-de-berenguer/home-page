@@ -1,0 +1,2 @@
+module About::ResumesHelper
+end

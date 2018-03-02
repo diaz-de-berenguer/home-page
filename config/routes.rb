@@ -12,6 +12,10 @@ Rails.application.routes.draw do
     resources :timeline
   end
 
+  namespace :about, path: '/' do
+    resource :resume, only: [:show, :edit, :update]
+  end
+
   namespace :project do
     get '/' => 'projects#index'
   end
