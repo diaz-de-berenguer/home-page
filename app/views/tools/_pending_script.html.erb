@@ -1,57 +1,16 @@
 <script>
 	// Game!
+
 	document.addEventListener("turbolinks:load", function() {
-		$(this).keyup(function(e) {
-			if (e.keyCode == 32 && $("#canvas").length < 1) {
+		this.addEventListener("keypress", function(e) {
+			if (e.code == "Space") {
 				start();
 			};
-
-			if (e.keyCode == 27 && $("#canvas").length >= 1) {
-				closeGame();
-			};
 		})
-
-		$(".space-bar").on("click", start);
 	});
 
-	// Set a variable for the ".info" div
-	let infoDiv        = $(".pending-container .info");
-	let infoContentDiv = $(".pending-container .info-content");
-
-	// Start -- occurs when user presses the space key, or click 'space-bar'
 	let start = () => {
-		// Add active class, a canvas element, and a way to close the game
-		infoDiv.addClass("active");
-		infoDiv.prepend('<div class="close-game"><%= fa_icon "times-circle" %></div><div id="canvas"><h1 class="instructions">instructions</h1></div>')
-		infoContentDiv.fadeOut(10);
+		console.log('start!')
 
-		// Initialize the game
-		setTimeout(initializeGame, 2000);
-
-		// Set function for closing the game
-		$(".close-game i").on("click", closeGame);
 	}
-
-	// Closes the game -- occurs when user presses the (x) button or the escape key
-	let closeGame = () => {
-		infoDiv.removeClass("active");
-		$(".close-game").remove();
-		$("#canvas").remove();
-		setTimeout(function() {
-			infoContentDiv.fadeIn();
-		}, 600);
-	}
-
-	let initializeGame = () => {
-		console.log('initializing Game!');
-
-		let canvas = $(".pending-container #canvas")
-
-		<%= render 'tools/game.js' %>
-
-		canvas.find('.instructions').fadeOut(900, function() {
-			let myp5 = new p5(game, 'canvas');
-		});
-	}
-
 </script>
