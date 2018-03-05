@@ -1,5 +1,10 @@
 // Variables
 
+$linkedin-color: #0077B5;
+$github-color:   #333;
+$twitter-color:  #55acee;
+
+
 // Restate Bootstrap Variables
 
 $white:    #fff !default;
@@ -25,7 +30,7 @@ $green:   #28a745 !default;
 $teal:    #20c997 !default;
 $cyan:    #17a2b8 !default;
 
-$primary:       $orange !default;
+$primary:       $teal !default;
 $secondary:     $gray-600 !default;
 $success:       $green !default;
 $info:          $cyan !default;

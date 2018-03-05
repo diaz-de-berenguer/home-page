@@ -2,29 +2,14 @@
 
 @import "./resume/variables.scss";
 @import "./resume/mixins.scss";
-@import "./resume/global.scss";
-@import "./resume/nav.scss";
+// @import "./resume/global.scss";
 @import "./resume/bootstrap-overrides.scss";
-@import "./resume/resume-item.scss";
-
-
-// body {
-//   font-family: 'Open Sans', serif;
-//   padding-top: 54px;
-//   color: #868e96;
-// }
-
-// @media (min-width: 992px) {
-//   body {
-//     padding-top: 0;
-//     padding-left: 17rem;
-//   }
-// }
 
 #resume-layout {
   font-family: 'Open Sans', serif;
   padding-top: 54px;
-  color: #868e96;
+  color: $gray-600;
+  font-weight: 400;
 
 	h1,
 	h2,
@@ -34,13 +19,12 @@
 	h6 {
 	  font-family: 'Muli', serif;
 	  font-weight: 700;
-	  text-transform: uppercase;
+	  // text-transform: uppercase;
 	  color: #343a40;
 	}
 
 	h1 {
-	  font-size: 6rem;
-	  line-height: 5.5rem;
+	  font-size: 5rem;
 	}
 
 	h2 {
@@ -48,23 +32,51 @@
 	}
 
 	.subheading {
-	  text-transform: uppercase;
-	  font-weight: 500;
-	  font-family: 'Muli', serif;
-	  font-size: 1.35rem;
+		font-weight: 500;
+		font-family: 'Muli', serif;
+		font-size: 1.25rem;
+		margin-top: 1rem;
+	  .contact-icon {
+	  	width: 1.5em;
+	  	text-align: center;
+	  	display: inline-block;
+	  }
 	}
 
-	.list-social-icons a {
-	  color: #495057;
+	.social-bg {
+		background-color: #fff;
+		padding: 1.15em .6em 1.25em;
+		border-radius: 4em;
+		margin-right: 1em;
 	}
 
-	.list-social-icons a:hover {
-	  color: #BD5D38;
+	.list-social-icons {
+		text-align: right;
+		a {
+			color: $secondary;
+		}
+		a.twitter {
+			&:hover {
+				color: $twitter-color;
+			}
+		}
+		a.linkedin {
+			&:hover {
+				color: $linkedin-color;
+			}
+		}
+		a.github {
+			&:hover {
+				color: $github-color;
+			}
+		}
+		a.mail {
+			&:hover {
+				color: $primary;
+			}
+		}
 	}
 
-	.list-social-icons a .fa-lg {
-	  font-size: 1.75rem;
-	}
 
 	.list-icons {
 	  font-size: 3rem;
@@ -79,7 +91,66 @@
 	  text-transform: uppercase;
 	}
 
-	@media (min-width: 992px) {
+	section.resume-section {
+	  border-bottom: 1px solid #dee2e6;
+	  padding-top: 5rem !important;
+	  padding-bottom: 5rem !important;
+	  .inner-div {
+	  	width: 100%;
+	  }
+	}
+
+	section.resume-section .resume-item .resume-date {
+	  min-width: none;
+	}
+
+	// .bg-primary {
+	//   // background-color: #BD5D38 !important;
+	//   background-color: blue;
+	// }
+
+	// .text-primary {
+	//   color: #BD5D38 !important;
+	// }
+
+	// a {
+	//   color: #BD5D38;
+	// }
+
+	// a:hover, a:focus, a:active {
+	//   color: #824027;
+	// }
+	a.nav-link.active {
+		color: rgba(255,255,255,0.95);
+	}
+
+	a.nav-link {
+		color: rgba(255,255,255,0.75);
+		&:hover {
+			color: #fff;
+		}
+	}
+
+	a.no-color {
+		// color: $gray-600;
+		color: inherit;
+		&:hover {
+			color: $primary;
+		}
+	}
+
+	.name {
+		.de-berenguer {
+			transition: margin-left 1s ease-in-out;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+  #resume-layout {
+    padding-top: 0;
+    padding-left: 17rem;
+
 	  #sideNav {
 	    text-align: center;
 	    position: fixed;
@@ -89,10 +160,11 @@
 	    flex-direction: column;
 	    width: 17rem;
 	    height: 100vh;
+	    background: linear-gradient(230deg, $primary 50%, darken($primary, 15%)) !important;
 	  }
 	  #sideNav .navbar-brand {
 	    display: flex;
-	    margin: auto auto 0;
+	    margin: 4rem auto;
 	    padding: 0.5rem;
 	  }
 	  #sideNav .navbar-brand .img-profile {
@@ -117,19 +189,15 @@
 	  #sideNav .navbar-collapse .navbar-nav .nav-item .nav-link {
 	    display: block;
 	  }
+	  section.resume-section {
+	    padding-top: 3rem !important;
+	    padding-bottom: 3rem !important;
+	  }
 	}
+}
 
-	section.resume-section {
-	  border-bottom: 1px solid #dee2e6;
-	  padding-top: 5rem !important;
-	  padding-bottom: 5rem !important;
-	}
-
-	section.resume-section .resume-item .resume-date {
-	  min-width: none;
-	}
-
-	@media (min-width: 768px) {
+@media (min-width: 768px) {
+	#resume-layout {
 	  section.resume-section {
 	    min-height: 100vh;
 	  }
@@ -137,38 +205,8 @@
 	    min-width: 18rem;
 	  }
 	}
-
-	@media (min-width: 992px) {
-	  section.resume-section {
-	    padding-top: 3rem !important;
-	    padding-bottom: 3rem !important;
-	  }
-	}
-
-	.bg-primary {
-	  background-color: #BD5D38 !important;
-	}
-
-	.text-primary {
-	  color: #BD5D38 !important;
-	}
-
-	a {
-	  color: #BD5D38;
-	}
-
-	a:hover, a:focus, a:active {
-	  color: #824027;
-	}
-
-	a.nav-link {
-		color: #fff;
-	}
 }
 
-@media (min-width: 992px) {
-  #resume-layout {
-    padding-top: 0;
-    padding-left: 17rem;
-  }
-}
+
+// @import "./resume/nav.scss";
+@import "./resume/resume-item.scss";

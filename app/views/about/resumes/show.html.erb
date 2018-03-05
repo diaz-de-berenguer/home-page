@@ -8,7 +8,8 @@
     <span class="d-block d-lg-none">Diego Diaz de Berenguer</span>
     <span class="d-none d-lg-block">
       <!-- <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profile.jpg" alt=""> -->
-      <%= image_tag "profile_pic.jpg", alt: "Profile Picture", class: "img-fluid img-profile rounded-circle mx-auto mb-2" %>
+      <%= image_tag "profile_pic.jpg", alt: "Profile Picture",
+          class: "img-fluid img-profile rounded-circle mx-auto mb-2" %>
     </span>
   </a>
 
@@ -57,68 +58,101 @@
 <!-- Main Body -->
 <div class="container-fluid p-0">
 
+	<!-- Social Links -->
+	<nav class="container-fluid" style="position:sticky;top:2em;margin-bottom: -2em;">
+		<ul class="list-inline list-social-icons mb-0">
+			<span class="social-bg">
+
+	  		<!-- Email -->
+	  	  <li class="list-inline-item">
+	  	    <a href="#" class="hide-email-from-bots mail">
+	  	      <span class="fa-stack fa-lg">
+	  	        <i class="fa fa-circle fa-stack-2x"></i>
+	  	        <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+	  	      </span>
+	  	    </a>
+	  	  </li>
+
+	  	  <!-- LinkedIn -->
+	  	  <li class="list-inline-item">
+	  	    <a href="https://www.linkedin.com/in/ddiazdeberenguer/" class="linkedin">
+	  	      <span class="fa-stack fa-lg">
+	  	        <i class="fa fa-circle fa-stack-2x"></i>
+	  	        <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+	  	      </span>
+	  	    </a>
+	  	  </li>
+
+	  	  <!-- Github -->
+	  	  <li class="list-inline-item">
+	  	    <a href="https://github.com/diaz-de-berenguer" class="github">
+	  	      <span class="fa-stack fa-lg">
+	  	        <i class="fa fa-circle fa-stack-2x"></i>
+	  	        <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+	  	      </span>
+	  	    </a>
+	  	  </li>
+
+	  	  <!-- Twitter -->
+	  	  <li class="list-inline-item">
+	  	    <a href="https://twitter.com/dd_de_b" class="twitter">
+	  	      <span class="fa-stack fa-lg">
+	  	        <i class="fa fa-circle fa-stack-2x"></i>
+	  	        <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+	  	      </span>
+	  	    </a>
+	  	  </li>
+		  </span>
+		</ul>
+	</nav>
+
 	<!-- Section: Summary and Contact info -->
   <section class="resume-section p-3 p-lg-5 d-flex d-column" id="about">
-    <div class="my-auto">
+    <div class="my-auto inner-div">
 
     	<!-- Name -->
-      <h1 class="mb-0">Diego
-        <span class="text-primary">Diaz de Berenguer</span>
+      <h1 class="mb-0 name">
+      	<span class="get-width">Diego</span>
+        <span class="text-primary">
+        	Diaz<br>
+        	<span class="de-berenguer">
+        		<span class="subtract-width">de</span>
+        		Berenguer
+        	</span>
+        </span>
       </h1>
 
       <!-- Contact Info -->
-      <div class="subheading mb-5">3542 Berry Street · Cheyenne Wells, CO 80810 · (317) 585-8468 ·
-        <a href="mailto:name@email.com">name@email.com</a>
+      <div class="subheading mb-5">
+      	<span class="contact-icon">
+      		<i class="fa fa-mobile"></i>
+      	</span>
+      	(504) 616-6196
+      	<br>
+        <a class="hide-email-from-bots no-color" href="#">
+	      	<span class="contact-icon">
+	      		<small><i class="fa fa-envelope"></i></small>
+	      	</span>
+        	diego<span>@</span>diazdeberenguer.com
+        </a>
       </div>
 
       <!-- Summary -->
       <p class="mb-5">
-      	I am experienced in leveraging agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.
+      	Full-stack developer, technical co-founder of
+      	<a href="http://www.safetyspot.com">
+      		SafetySpot.com
+      	</a>
+      	— completed a master’s degree in mechanical engineering with a focus on
+				developing computational algorithms to solve the
+      	<a href="https://en.wikipedia.org/wiki/Navier%E2%80%93Stokes_equations">
+      		Navier-Stokes differential equation.
+      	</a>
+      	Currently leading the development team of Safety Spot — a web based, IoT
+      	connected, management platform with clients in the prototyping, industrial,
+      	& construction industries.
       </p>
 
-      <!-- Social Links -->
-      <ul class="list-inline list-social-icons mb-0">
-
-        <!-- Twitter -->
-        <li class="list-inline-item">
-          <a href="#">
-            <span class="fa-stack fa-lg">
-              <i class="fa fa-circle fa-stack-2x"></i>
-              <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-            </span>
-          </a>
-        </li>
-
-        <!-- LinkedIn -->
-        <li class="list-inline-item">
-          <a href="#">
-            <span class="fa-stack fa-lg">
-              <i class="fa fa-circle fa-stack-2x"></i>
-              <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
-            </span>
-          </a>
-        </li>
-
-        <!-- Github -->
-        <li class="list-inline-item">
-          <a href="#">
-            <span class="fa-stack fa-lg">
-              <i class="fa fa-circle fa-stack-2x"></i>
-              <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-            </span>
-          </a>
-        </li>
-
-      	<!-- Share -->
-        <li class="list-inline-item">
-          <a href="#">
-            <span class="fa-stack fa-lg">
-              <i class="fa fa-circle fa-stack-2x"></i>
-              <i class="fa fa-share-alt fa-stack-1x fa-inverse"></i>
-            </span>
-          </a>
-        </li>
-      </ul>
     </div>
   </section>
 
@@ -127,47 +161,96 @@
     <div class="my-auto">
       <h2 class="mb-5">Experience</h2>
 
+			<!-- Safety Spot -->
       <div class="resume-item d-flex flex-column flex-md-row mb-5">
         <div class="resume-content mr-auto">
-          <h3 class="mb-0">Senior Web Developer</h3>
-          <div class="subheading mb-3">Intelitec Solutions</div>
-          <p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.</p>
+          <h3 class="mb-0">Lead Developer, Co-founder & CTO</h3>
+          <div class="subheading mb-3">
+          	<a href="http://www.safetyspot.com" class="no-color">
+          		Safety Spot, Inc.
+          	</a>
+          </div>
+
+        	<ul>
+        		<li>
+        			Built, from the ground up, an Enterprise SaaS platform that now has
+        			multiple paying clients.
+        		</li>
+        		<li>
+        			Responsible for coding, designing, and rapidly iterating & shipping
+        			product.
+        		</li>
+        		<li>
+        			Interact with clients and stakeholders to identify the best technical
+        			solutions.
+        		</li>
+        		<li>
+        			Lead and manage a team of five developers and engineers.
+        		</li>
+        	</ul>
+        	Products include:
+        	<ul>
+        		<li>
+        			IoT connected hardware, connection between micro service APi and
+        			physical hardware components
+        		</li>
+        		<li>
+        			API for mobile application, RoR back-end consumed by React Native app.
+        		</li>
+        		<li>
+        			LMS (learning management system) for adding training content, track
+        			enrollment, upload training material, and charge students.
+        		</li>
+        		<li>
+        			An e-commerce platform, using Braintree API, to provide .
+        		</li>
+        	</ul>
         </div>
         <div class="resume-date text-md-right">
-          <span class="text-primary">March 2013 - Present</span>
+          <span class="text-primary">September 2015 - Present</span>
         </div>
       </div>
 
       <div class="resume-item d-flex flex-column flex-md-row mb-5">
         <div class="resume-content mr-auto">
-          <h3 class="mb-0">Web Developer</h3>
-          <div class="subheading mb-3">Intelitec Solutions</div>
-          <p>Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.</p>
+          <h3 class="mb-0">Mechanical Engineer</h3>
+          <div class="subheading mb-3">
+          	<a href="http://www.jacobs.com/" class="no-color">
+          		Jacobs Engineering
+        		</a>
+        	</div>
+          <p>
+          	Something here
+          </p>
         </div>
         <div class="resume-date text-md-right">
-          <span class="text-primary">December 2011 - March 2013</span>
+          <span class="text-primary">November 2014 - April 2015</span>
         </div>
       </div>
 
       <div class="resume-item d-flex flex-column flex-md-row mb-5">
         <div class="resume-content mr-auto">
-          <h3 class="mb-0">Junior Web Designer</h3>
-          <div class="subheading mb-3">Shout! Media Productions</div>
-          <p>Podcasting operational change management inside of workflows to establish a framework. Taking seamless key performance indicators offline to maximise the long tail. Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration.</p>
+          <h3 class="mb-0">Computational Fluid Dynamics Analyst</h3>
+          <div class="subheading mb-3">ReactWell</div>
+          <p>
+          	Something more
+          </p>
         </div>
         <div class="resume-date text-md-right">
-          <span class="text-primary">July 2010 - December 2011</span>
+          <span class="text-primary">March 2014 - November 2014</span>
         </div>
       </div>
 
       <div class="resume-item d-flex flex-column flex-md-row">
         <div class="resume-content mr-auto">
-          <h3 class="mb-0">Web Design Intern</h3>
-          <div class="subheading mb-3">Shout! Media Productions</div>
-          <p>Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI.</p>
+          <h3 class="mb-0">Helpdesk Assistant</h3>
+          <div class="subheading mb-3">University of New Orleans</div>
+          <p>
+          	Something more!
+          </p>
         </div>
         <div class="resume-date text-md-right">
-          <span class="text-primary">September 2008 - June 2010</span>
+          <span class="text-primary">February 2010 - December 2013</span>
         </div>
       </div>
 
@@ -182,24 +265,24 @@
 
       <div class="resume-item d-flex flex-column flex-md-row mb-5">
         <div class="resume-content mr-auto">
-          <h3 class="mb-0">University of Colorado Boulder</h3>
-          <div class="subheading mb-3">Bachelor of Science</div>
-          <div>Computer Science - Web Development Track</div>
-          <p>GPA: 3.23</p>
+          <h3 class="mb-0">University of New Orleans</h3>
+          <div class="subheading mb-3">Masters of Science</div>
+          <div>Mechanical Engineering</div>
+          <p>GPA: 3.308</p>
         </div>
         <div class="resume-date text-md-right">
-          <span class="text-primary">August 2006 - May 2010</span>
+          <span class="text-primary">January 2012 - December 2013</span>
         </div>
       </div>
 
       <div class="resume-item d-flex flex-column flex-md-row">
         <div class="resume-content mr-auto">
-          <h3 class="mb-0">James Buchanan High School</h3>
-          <div class="subheading mb-3">Technology Magnet Program</div>
-          <p>GPA: 3.56</p>
+          <h3 class="mb-0">University of New Orleans</h3>
+          <div class="subheading mb-3">Bachelor of Science</div>
+          <p>GPA: 3.570</p>
         </div>
         <div class="resume-date text-md-right">
-          <span class="text-primary">August 2002 - May 2006</span>
+          <span class="text-primary">August 2006 - December 2010</span>
         </div>
       </div>
 

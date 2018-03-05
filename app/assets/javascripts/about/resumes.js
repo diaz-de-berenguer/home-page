@@ -30,6 +30,20 @@ $(document).ready( () => {
 	    target: '#sideNav'
 	  });
 
+	  // Get the perfect offset to the name in the title
+	  let diegoWidth = $(".get-width").width();
+	  let deWidth = $(".subtract-width").width() - 1;
+	  let offsetWidth = diegoWidth - deWidth;
+	  setTimeout( () => {
+	  	$(".de-berenguer").css("margin-left", offsetWidth);
+	  }, 300)
+
+	  // Add link to email after a second (hopefully this will avoid spam bots)
+	  setTimeout( () => {
+	  	let emailAddress = "mailto:diego"
+	  	emailAddress += "@diazdeberenguer.com"
+	  	$(".hide-email-from-bots").attr("href", emailAddress)
+	  }, 1000 )
 	}
 
 })
